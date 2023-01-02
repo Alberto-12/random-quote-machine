@@ -22,7 +22,7 @@ const QuoteBox = () => {
     }, []); // The empty array ensures that this only runs on first load
   
     return (
-      <div id="quote-box">
+      <div id="quote-box" style={{textAlign:'center'}}>
         <div id="text">
           {quote.text}
         </div>
@@ -30,7 +30,7 @@ const QuoteBox = () => {
           {author}
         </div>
         <button id="new-quote" onClick={getNewQuote}>New Quote</button>
-        <a href="/" id="tweet-quote">Tweet Quote</a>
+        <a href={"https://twitter.com/intent/tweet?text=" + quote.text + " -" + author} id="tweet-quote">Tweet Quote</a>
       </div>
     );
   };
